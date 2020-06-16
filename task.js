@@ -60,6 +60,22 @@ function getAverageMark(marks) {
         avgMark = sumMark / marks.length;
         return avgMark;
         
-    }
-   
+    }   
 }
+
+//Задача 3
+function getPersonData(secretData) {
+    let decryption = {};
+    decryption.firstName = getDecodedValue(secretData.aaa);
+    decryption.lastName = getDecodedValue(secretData.bbb);
+    return decryption;
+}
+
+function getDecodedValue(secret) {
+    if (secret === 1) {
+        return `Эмильо`;
+    } else if (secret === 0) {
+        return `Родриго`;
+    } 
+}
+
